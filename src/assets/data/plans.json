@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Sesión individual",
+        "price": "70€",
+        "features": [
+            "Sesión individual",
+            "Abonada en cada consulta"
+        ]
+    },
+    {
+        "title": "Primera sesión",
+        "price": "50€",
+        "features": [
+            "Precio reducido",
+            "Sin compromiso"
+        ],
+        "featured": true
+    },
+    {
+        "title": "Bono 4 sesiones",
+        "price": "220€",
+        "features": [
+            "Ahorras 60€",
+            "Se abona en un solo pago"
+        ]
+    }
+]
