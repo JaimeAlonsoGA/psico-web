@@ -13,16 +13,24 @@ import Footer from "@/components/layout/footer";
 
 export default function LandingPage() {
     return (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-linear-to-b from-accent/20 to-background space-y-20">
             <Hero />
-            <Goals />
-            <About />
-            <Services />
-            <Pricing />
-            <Stats />
-            <Testimonials />
-            <Benefits />
-            <Problems />
+            <div className="space-y-12">
+                <div className="space-y-24 max-w-7xl mx-auto px-6 xl:px-0">
+                    <Goals />
+                    <About />
+                </div>
+                <div className="bg-background py-12 px-6 xl:px-0">
+                    <Services />
+                </div>
+                <Pricing />
+                <Stats />
+                <div className="pt-12 space-y-24 max-w-7xl mx-auto px-6 xl:px-0">
+                    <Testimonials />
+                    <Benefits />
+                    <Problems />
+                </div>
+            </div>
             <Contact />
             <FAQ />
             <Footer />

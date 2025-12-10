@@ -64,7 +64,7 @@
   
   /* Muted - verde muy suave */
   --muted: oklch(0.96 0.02 165);
-  --muted-foreground: oklch(0.5 0.01 160);
+  --muted-foreground: oklch(68.99% 0.00894 157.457);
   
   /* Accent - verde más vibrante */
   --accent: oklch(0.94 0.04 165);

@@ -1,67 +1,83 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, Award, Target } from "lucide-react";
+import { GraduationCap, Award, Target, Mail, MessageCircle } from "lucide-react";
+import portrait from "@/assets/images/portrait_3.webp";
 
 const About: React.FC = () => {
     return (
-        <section id="about" className="py-24 px-4 bg-linear-to-b from-accent/20 to-background">
-            <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-16 space-y-4 animate-fade-in-up">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground text-balance">
-                        Me gustaría acompañarte en este proceso
-                    </h2>
-                    <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-                        Juntos desarrollaremos las habilidades que necesitas para vivir plenamente
-                    </p>
+        <section id="about" className="space-y-10 pb-6">
+            <div className="text-center space-y-4 animate-fade-in-up">
+                <h2 className="text-4xl md:text-5xl font-bold text-primary text-balance">
+                    Puedo acompañarte en este proceso
+                </h2>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+                    Juntos desarrollaremos las habilidades que necesitas para vivir plenamente
+                </p>
+            </div>
+
+            <div className="flex flex-col md:flex-row gap-10 md:items-stretch">
+                {/* Image */}
+                <div className="relative group animate-fade-in md:w-4/5">
+                    {/* <div className="absolute inset-0 bg-linear-to-tr from-primary/20 to-secondary/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all" /> */}
+                    <img
+                        src={portrait}
+                        alt="Álvaro Jimenez"
+                        className="rounded-3xl h-full w-full object-cover mx-auto"
+                    />
+                    <Badge variant="default" className="absolute top-5 left-5 text-base px-6 py-2">
+                        <GraduationCap className="w-4 h-4 mr-2" />
+                        Psicólogo Sanitario
+                    </Badge>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Image */}
-                    <div className="relative group animate-fade-in">
-                        <div className="absolute inset-0 bg-linear-to-tr from-primary/20 to-secondary/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all" />
-                        <img
-                            src="https://asmentepsicologia.com/wp-content/uploads/2024/08/Diseno-sin-titulo-4-1024x682.png"
-                            alt="Alberto Sainz"
-                            className="relative rounded-3xl shadow-2xl w-full h-auto object-cover"
-                        />
-                    </div>
+                {/* Content */}
+                <div className="flex flex-col gap-6 md:justify-between animate-fade-in-up">
+                    <div className="space-y-4">
+                        <h3 className="text-3xl md:text-4xl text-center md:text-start font-bold text-foreground">
+                            Soy Álvaro Jimenez
+                        </h3>
 
-                    {/* Content */}
-                    <div className="space-y-8 animate-fade-in-up">
-                        <div className="space-y-2">
-                            <Badge variant="secondary" className="text-base px-4 py-2">
-                                <GraduationCap className="w-4 h-4 mr-2" />
-                                Psicólogo Sanitario
-                            </Badge>
-                            <h3 className="text-3xl md:text-4xl font-bold text-foreground">
-                                Alberto Sainz
-                            </h3>
-                        </div>
-
-                        <div className="space-y-6">
-                            <p className="text-lg text-muted-foreground leading-relaxed">
+                        <div className="space-y-4">
+                            <p className="text-lg text-muted-foreground leading-relaxed text-justify">
                                 Soy psicólogo sanitario especializado en ansiedad a través de enfoques modernos.
                                 Estudié en <strong className="text-foreground">España, Estados Unidos y Países Bajos</strong> gracias
                                 a diferentes becas.
                             </p>
 
-                            <p className="text-lg text-muted-foreground leading-relaxed">
+                            <p className="text-lg text-muted-foreground leading-relaxed text-justify">
                                 Tras observar el modelo común de psicoterapia que solo aplica soluciones a corto plazo,
                                 decidí especializarme en enfoques más modernos con garantías a largo plazo.
                             </p>
-
-                            <Card className="bg-primary/5 border-primary/20">
-                                <CardContent className="pt-6">
-                                    <div className="flex items-start gap-3">
-                                        <Target className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                                        <p className="text-lg font-semibold text-foreground leading-relaxed">
-                                            La idea de ir al psicólogo es que desarrolles una serie de habilidades
-                                            y aprendizajes para no tener que volver nunca.
-                                        </p>
-                                    </div>
-                                </CardContent>
-                            </Card>
                         </div>
+                        <p className="text-lg text-foreground/80 leading-relaxed text-justify">
+                            ❝ Su dedicación y experiencia me ayudaron a desarrollar habilidades prácticas para manejar mi ansiedad
+                            de manera efectiva. Recomiendo encarecidamente a Álvaro a cualquiera que busque un enfoque fresco y efectivo para superar la ansiedad. ❞
+                        </p>
+                    </div>
+                    <div className="space-y-6">
+                        <Card className="bg-primary/5 border-primary/20">
+                            <CardContent className="pt-6">
+                                <div className="flex items-start gap-3">
+                                    <Target className="w-6 h-6 text-primary shrink-0 mt-1" />
+                                    <p className="text-lg font-semibold text-foreground leading-relaxed">
+                                        La idea de ir al psicólogo es que desarrolles una serie de habilidades
+                                        y aprendizajes para no tener que volver nunca.
+                                    </p>
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        {/* <div className="grid grid-cols-3">
+                            <div className="mx-auto w-20 h-20 bg-linear-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <Mail className="w-10 h-10 text-white" />
+                            </div>
+                            <div className="mx-auto w-20 h-20 bg-linear-to-br from-green-500 to-green-600 rounded-3xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <MessageCircle className="w-10 h-10 text-white" />
+                            </div>
+                            <div className="mx-auto w-20 h-20 bg-linear-to-br from-pink-500 to-yellow-500 rounded-3xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                                <Mail className="w-10 h-10 text-white" />
+                            </div>
+                        </div> */}
 
                         {/* Achievements */}
                         <div className="grid grid-cols-3 gap-4">
@@ -90,7 +106,7 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 

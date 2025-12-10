@@ -2,7 +2,7 @@ import { Award, Star, TrendingUp } from "lucide-react";
 
 export const Stats: React.FC = () => {
     return (
-        <section className="py-20 px-4 bg-linear-to-br from-primary via-primary/90 to-secondary text-primary-foreground relative overflow-hidden">
+        <section className="py-10 px-6 xl:px-0 bg-linear-to-br from-primary via-primary/90 to-secondary text-primary-foreground relative overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute inset-0 bg-grid-white/5 bg-position-[32px_32px]" />
             <div className="absolute inset-0 bg-linear-to-t from-primary/50 to-transparent" />

@@ -1,36 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import portrait from "@/assets/images/portrait_1_bg.png";
+import portrait from "@/assets/images/portrait_no_bg_1.png";
 
 const Hero: React.FC = () => {
     return (
-        <section className="relative min-h-screen flex w-full items-center justify-center bg-linear-to-br from-secondary/20 to-primary/20 overflow-hidden px-4">
+        <section className="relative min-h-screen flex w-full items-end justify-center bg-linear-to-br from-secondary/20 to-primary/50 overflow-hidden px-6 xl:px-0">
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse" />
                 <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-700" />
             </div>
 
-            <div className="max-w-7xl flex flex-row items-center justify-between relative z-10 w-full">
-                <div className="space-y-8 animate-fade-in-up">
-                    {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                        <Sparkles className="w-4 h-4" />
-                        <span>Psicología con enfoque moderno</span>
-                    </div> */}
+            <div className="max-w-7xl flex flex-row items-center justify-center md:justify-between relative z-10 w-full">
+                <div className="space-y-8 animate-fade-in-up pb-8 md:w-1/2">
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground text-center md:text-left">Pedir ayuda no es un fracaso, es un acto de amor propio</h1>
 
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground">
-                        Pedir ayuda no es un{" "}
-                        <span className="">fracaso</span>
-                        <br />
-                        es un acto de
-                        <br />
-                        <span className="bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent">
-                            amor propio
-                        </span>
-                    </h1>
-
-                    {/* <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground">Pedir ayuda no es un fracaso, es un acto de amor propio</h1> */}
-
-                    <p className="text-xl text-muted-foreground max-w-2xl text-pretty leading-relaxed">
+                    <p className="text-xl text-foreground/60 max-w-2xl text-pretty leading-relaxed text-justify">
                         Desarrolla las habilidades necesarias para vivir la vida que mereces.
                         Un espacio seguro donde crecer y transformarte.
                     </p>
@@ -71,12 +55,11 @@ const Hero: React.FC = () => {
                         </div>
                     </div> */}
                 </div>
-
-                <div className="relative animate-fade-in delay-300 hidden lg:block w-2/3">
+                <div className="w-1/2 hidden lg:flex h-full items-end">
                     <img
                         src={portrait}
-                        alt="Alberto Sainz - Psicólogo"
-                        className="relative rounded-3xl h-auto object-cover"
+                        alt="Alvaro Jimenez - Psicólogo"
+                        className="animate-fade-in delay-300 h-auto w-full object-contain object-bottom"
                     />
                 </div>
             </div>
